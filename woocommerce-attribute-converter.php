@@ -17,8 +17,8 @@ add_action('admin_menu', 'custom_to_global_menu');
 function custom_to_global_menu() {
     add_submenu_page(
         'woocommerce',
-        'Конвертація атрибутів',
-        'Конвертація атрибутів',
+        'Attribute Converter',
+        'Attribute Converter',
         'manage_woocommerce',
         'custom-to-global',
         'custom_to_global_page'
@@ -29,7 +29,7 @@ function custom_to_global_menu() {
 function custom_to_global_page() {
     // Перевіряємо, чи WooCommerce активний
     if (!class_exists('WooCommerce')) {
-        echo '<div class="notice notice-error"><p>WooCommerce не активовано. Будь ласка, активуйте WooCommerce перед використанням цього інструменту.</p></div>';
+        echo '<div class="notice notice-error"><p>WooCommerce is not activated. Please activate WooCommerce before using this tool.</p></div>';
         return;
     }
 
@@ -49,15 +49,15 @@ function custom_to_global_page() {
     $custom_attributes = get_unique_custom_attributes();
     ?>
     <div class="wrap">
-        <h1>Конвертація індивідуальних атрибутів у глобальні</h1>
+        <h1>Convert Custom attributes to global</h1>
         
         <form method="post" action="">
             <table class="form-table">
                 <tr>
-                    <th scope="row"><label for="attribute_name">Виберіть атрибут для конвертації:</label></th>
+                    <th scope="row"><label for="attribute_name">Select attribute to convert:</label></th>
                     <td>
                         <select name="attribute_name" id="attribute_name">
-                            <option value="">Виберіть атрибут</option>
+                            <option value="">Select attribute</option>
                             <?php foreach ($custom_attributes as $attr_name): ?>
                                 <option value="<?php echo esc_attr($attr_name); ?>"><?php echo esc_html($attr_name); ?></option>
                             <?php endforeach; ?>
@@ -66,7 +66,7 @@ function custom_to_global_page() {
                 </tr>
             </table>
             <p class="submit">
-                <input type="submit" name="convert_attributes" class="button button-primary" value="Конвертувати атрибут">
+                <input type="submit" name="convert_attributes" class="button button-primary" value="Convert attribute">
             </p>
         </form>
     </div>
@@ -227,5 +227,5 @@ function convert_custom_to_global($attribute_name) {
     // Очищуємо кеш
     delete_transient('wc_attribute_taxonomies');
     
-    return "Конвертація завершена! Оновлено товарів: $products_updated.";
+    return "Conversion completed! Products updated: $products_updated.";
 }
