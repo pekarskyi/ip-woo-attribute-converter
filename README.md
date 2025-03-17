@@ -19,3 +19,11 @@
 4. Активуйте плагін в розділі Плагіни.
 5. Перейдіть до WooCommerce > Convert Attributes.
 6. Виберіть атрибут, який хочете конвертувати і натисніть кнопку "Convert Attribute".
+
+![https://github.com/pekarskyi/assets/raw/master/woo-attribute-converter/woocommerce-attribute-converter.jpg](https://github.com/pekarskyi/assets/raw/master/woo-attribute-converter/woocommerce-attribute-converter.jpg)
+
+👨Subscribe to my YouTube channel!
+
+[![YouTube Channel Subscribers](https://img.shields.io/youtube/channel/subscribers/UC9ZEeT6WrGupgza9KXpazyA)](https://www.youtube.com/@inwebpress/videos)
+
+[![Stand With Ukraine](https://raw.githubusercontent.com/vshymanskyy/StandWithUkraine/main/badges/StandWithUkraine.svg)](https://justgo.ink/standwithukraine)
