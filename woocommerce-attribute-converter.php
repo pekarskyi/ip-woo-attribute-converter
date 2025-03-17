@@ -227,5 +227,5 @@ function convert_custom_to_global($attribute_name) {
     // Очищуємо кеш
     delete_transient('wc_attribute_taxonomies');
     
-    return "Конвертація завершена! Оновлено товарів: $products_updated. Створено значень атрибутів: $values_created.";
+    return "Конвертація завершена! Оновлено товарів: $products_updated.";
 }
