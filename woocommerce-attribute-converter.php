@@ -1,6 +1,6 @@
 <?php
 /**
- * Plugin Name: WooCommerce Custom to Global Attributes Converter
+ * Plugin Name: Woo Custom to Global Attributes Converter
  * Description: Конвертує індивідуальні атрибути товарів у глобальні атрибути
  * Version: 1.0
  * Author: Mykola Pekarskyi
