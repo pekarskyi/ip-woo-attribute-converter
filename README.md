@@ -20,6 +20,7 @@
 5. Перейдіть до WooCommerce > Convert Attributes.
 6. Виберіть атрибут, який хочете конвертувати і натисніть кнопку "Convert Attribute".
 
+## Скріншот
 ![https://github.com/pekarskyi/assets/raw/master/woo-attribute-converter/woocommerce-attribute-converter.jpg](https://github.com/pekarskyi/assets/raw/master/woo-attribute-converter/woocommerce-attribute-converter.jpg)
 
 👨Subscribe to my YouTube channel!
