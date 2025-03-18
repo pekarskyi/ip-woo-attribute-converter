@@ -1,0 +1,136 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: IP-WACG\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-03-18 09:11+0000\n"
+"PO-Revision-Date: 2025-03-18 12:21+0000\n"
+"Last-Translator: \n"
+"Language-Team: Ukrainian\n"
+"Language: uk\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10 >= 2 && "
+"n%10<=4 &&(n%100<10||n%100 >= 20)? 1 : 2);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Loco-Version: 2.7.1; wp-6.7.2\n"
+"X-Domain: ipwacg"
+
+#: includes/sidebar.php:38
+msgid "author's website"
+msgstr "сайт автора, послуги, консультація"
+
+#: includes/class-ipwacg-converter.php:117
+#| msgid "Check if you already have all attributes set as global"
+msgid "Check if you already have all attributes set as global."
+msgstr "Перевірте, чи всі атрибути вже встановлено як глобальні"
+
+#. %d: number of updated products
+#: includes/class-ipwacg-converter.php:299
+msgid "Conversion completed! Updated products: %d."
+msgstr "Конверсію завершено! Оновлені товари: %d."
+
+#: includes/class-ipwacg-converter.php:109
+msgid "Convert Attribute"
+msgstr "Конвертувати атрибут"
+
+#: includes/class-ipwacg-converter.php:32
+#: includes/class-ipwacg-converter.php:33
+msgid "Convert Attributes"
+msgstr "Конвертувати атрибути"
+
+#: includes/class-ipwacg-converter.php:85
+msgid "Convert Custom Attributes to Global"
+msgstr "Конвертер атрибутів"
+
+#. Description of the plugin
+msgid "Converts product custom attributes to global attributes"
+msgstr "Перетворення індивідуальних атрибутів товарів на глобальні"
+
+#: includes/sidebar.php:6
+msgid "Converts product custom attributes to global attributes."
+msgstr "Перетворення індивідуальних атрибутів товарів на глобальні"
+
+#: includes/sidebar.php:20
+msgid "description, FAQ and updates."
+msgstr "опис, поширені запитання та оновлення."
+
+#: includes/sidebar.php:14
+msgid "Helpful Links:"
+msgstr "Корисні посилання:"
+
+#: includes/class-ipwacg-converter.php:118
+msgid ""
+"If you need to create new attributes, go to Products > Attributes in the "
+"WooCommerce menu"
+msgstr ""
+"Якщо вам потрібно створити нові атрибути, перейдіть до розділу \"Товари\" "
+"&gt; \"Атрибути\" в меню WooCommerce"
+
+#: includes/sidebar.php:36
+msgid "InwebPress"
+msgstr "InwebPress"
+
+#. Name of the plugin
+msgid "IP-WACG"
+msgstr "IP-WACG"
+
+#: includes/sidebar.php:10
+msgid "It is recommended to create a backup of the database!"
+msgstr "Рекомендується створити резервну копію бази даних!"
+
+#. Author of the plugin
+msgid "Mykola Pekarskyi"
+msgstr "Mykola Pekarskyi"
+
+#: includes/class-ipwacg-converter.php:89
+msgid ""
+"No custom attributes found in your products. The conversion tool is "
+"currently inactive."
+msgstr ""
+"Індивідуальні атрибути відсутні. Інструмент конвертації наразі неактивний."
+
+#: includes/sidebar.php:30
+msgid "Pifagor Community"
+msgstr "Pifagor Community"
+
+#: woo-attribute-converter.php:45
+msgid "Plugin IP-WACG requires WooCommerce to be installed and activated."
+msgstr "Плагін IP-WACG вимагає встановлення та активації WooCommerce."
+
+#: includes/sidebar.php:18
+msgid "Plugin page on Github"
+msgstr "Сторінка плагіна на Github"
+
+#: includes/sidebar.php:26
+msgid "recommended plugin for creating site backups."
+msgstr "рекомендований плагін для створення резервних копій сайтів."
+
+#: includes/class-ipwacg-converter.php:100
+msgid "Select an attribute"
+msgstr "Виберіть атрибут"
+
+#: includes/class-ipwacg-converter.php:97
+msgid "Select attribute to convert:"
+msgstr "Виберіть атрибут для перетворення:"
+
+#: woo-attribute-converter.php:31
+msgid "Settings"
+msgstr "Налаштування"
+
+#: includes/sidebar.php:32
+msgid "Ukrainian Telegram community of WordPress site owners and developers."
+msgstr ""
+"Українська Telegram-спільнота власників та розробників сайтів на WordPress."
+
+#: includes/sidebar.php:9
+msgid "Warning:"
+msgstr "Увага:"
+
+#: includes/class-ipwacg-converter.php:115
+msgid "What to do next:"
+msgstr "Що робити далі:"
+
+#: includes/sidebar.php:24
+msgid "WPvivid Backup & Migration"
+msgstr "WPvivid Backup & Migration"

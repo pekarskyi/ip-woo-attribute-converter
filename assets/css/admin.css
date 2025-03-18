@@ -1,0 +1,107 @@
+.notice {
+    border-top-width: 0px;
+    border-right-width: 0px;
+    border-bottom-width: 0px;
+    box-shadow: none !important;
+}
+
+.ipwacg-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.ipwacg-main-content {
+    flex: 1;
+    min-width: 65%;
+    padding-right: 20px;
+}
+
+.ipwacg-sidebar {
+    width: 30%;
+    min-width: 300px;
+    background: #f8f8f8;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.ipwacg-section_information {
+    width: 100%;
+    margin-bottom: 0px;
+}
+
+.ipwacg-section_information h1 {
+    margin-top: 0;
+    color: #23282d;
+}
+
+.ipwacg-warning_sidebar-block {
+    background-color: #fcf9e8;
+    border-left: 4px solid #ffba00;
+    padding: 10px 15px;
+    margin: 15px 0;
+}
+
+.ipwacg-helpful_sidebar-block {
+    background-color: #f5f5f5;
+    border-left: 4px solid #007cba;
+    padding: 10px 15px;
+    margin: 15px 0;
+}
+
+.ipwacg-helpful_sidebar-block ul {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.ipwacg-standwithua_sidebar-block {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.ipwacg-helpful_sidebar-block a[href*="github.com"]:before {
+    content: '';
+    background: url('../images/github-logo.svg') no-repeat 100% 50%;
+    background-size: 19px;
+    padding-right: 20px;
+    margin-right: 3px;
+}
+
+.ipwacg-helpful_sidebar-block a[href*="wordpress.org"]:before {
+    content: '';
+    background: url('../images/wp-logo.png') no-repeat 100% 50%;
+    background-size: 17px;
+    padding-right: 20px;
+    margin-right: 3px;
+}
+
+.ipwacg-helpful_sidebar-block a[href*="inwebpress.com"]:before {
+    content: '';
+    background: url('../images/inwebpress-logo.png') no-repeat 100% 50%;
+    background-size: 17px;
+    padding-right: 20px;
+    margin-right: 3px;
+}
+
+.ipwacg-helpful_sidebar-block a[href*="t.me"]:before {
+    content: '';
+    background: url('../images/telegram-logo.png') no-repeat 100% 50%;
+    background-size: 17px;
+    padding-right: 20px;
+    margin-right: 3px;
+}
+
+@media screen and (max-width: 782px) {
+    .ipwacg-main-content {
+        width: 100%;
+        padding-right: 0;
+    }
+
+    .ipwacg-sidebar {
+        width: 100%;
+        margin-top: 20px;
+    }
+}
