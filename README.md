@@ -33,12 +33,12 @@
 ![https://github.com/pekarskyi/assets/raw/master/woo-attribute-converter/woocommerce-attribute-converter.jpg](https://github.com/pekarskyi/assets/raw/master/woo-attribute-converter/woocommerce-attribute-converter.jpg)
 
 ## Список змін
-Версія 1.1 - 18.03.2025:
+**Версія 1.1 - 18.03.2025:**
 - FIXED: класи CSS та неймінг.
 - ADD: сайдбар з інформацією.
 - ADD: Локалізація (Українська, Англійська і Російська).
 
-Версія 1.0 - 17.03.2025:
+**Версія 1.0 - 17.03.2025:**
 - Робоча перша версія.
 
 ## Підписка та підтримка
