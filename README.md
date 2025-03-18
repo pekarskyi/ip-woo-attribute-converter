@@ -3,6 +3,8 @@
 
 Перед конвертацією атрибутів зробіть резервну копію БД!
 
+[![GitHub release (latest by date)](https://img.shields.io/github/v/release/pekarskyi/woo-attribute-converter?style=for-the-badge)](https://GitHub.com/pekarskyi/woo-attribute-converter/releases/)
+
 ## Можливості:
 1. Додає новий пункт меню в адмінпанелі WooCommerce: "Конвертація атрибутів"
 2. Автоматично знаходить всі індивідуальні атрибути, які використовуються у ваших товарах
@@ -12,12 +14,12 @@
 6. Додає ці значення як терміни глобального атрибута
 7. Оновлює всі товари, замінюючи індивідуальний атрибут на глобальний
 
-## Languages
-- Ukrainian
-- English
-- Russian
+## Локалізація:
+- Українська
+- Англійська
+- Російська
 
-Need translations into other languages? – Feel free to reach out!
+Потрібні переклади на інші мови? - Не соромтеся звертатися!
 
 ## Встановлення:
 1. Перейдіть до репозиторію плагіна на GitHub.
@@ -30,18 +32,18 @@ Need translations into other languages? – Feel free to reach out!
 ## Скріншоти:
 ![https://github.com/pekarskyi/assets/raw/master/woo-attribute-converter/woocommerce-attribute-converter.jpg](https://github.com/pekarskyi/assets/raw/master/woo-attribute-converter/woocommerce-attribute-converter.jpg)
 
-## Changelog
+## Список змін
 Версія 1.1 - 18.03.2025:
-- FIXED: CSS classes.
-- ADD: sidebar with info.
-- ADD: Localization (Ukrainian, English and Russian).
+- FIXED: класи CSS та неймінг.
+- ADD: сайдбар з інформацією.
+- ADD: Локалізація (Українська, Англійська і Російська).
 
 Версія 1.0 - 17.03.2025:
-- Stable version.
+- Робоча перша версія.
 
-## Subscribe and Support Ukraine
+## Підписка та підтримка
 
-👨Subscribe to my YouTube channel!
+👨Підпишіться на мій канал на YouTube!
 
 [![YouTube Channel Subscribers](https://img.shields.io/youtube/channel/subscribers/UC9ZEeT6WrGupgza9KXpazyA)](https://www.youtube.com/@inwebpress/videos)
 
