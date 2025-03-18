@@ -12,6 +12,13 @@
 6. Додає ці значення як терміни глобального атрибута
 7. Оновлює всі товари, замінюючи індивідуальний атрибут на глобальний
 
+## Languages
+- Ukrainian
+- English
+- Russian
+
+Need translations into other languages? – Feel free to reach out!
+
 ## Встановлення:
 1. Перейдіть до репозиторію плагіна на GitHub.
 2. Натисніть на кнопку Code (зелена кнопка). Виберіть Download ZIP і збережіть файл на свій комп'ютер.
@@ -22,6 +29,17 @@
 
 ## Скріншоти:
 ![https://github.com/pekarskyi/assets/raw/master/woo-attribute-converter/woocommerce-attribute-converter.jpg](https://github.com/pekarskyi/assets/raw/master/woo-attribute-converter/woocommerce-attribute-converter.jpg)
+
+## Changelog
+Версія 1.1 - 18.03.2025:
+- FIXED: CSS classes.
+- ADD: sidebar with info.
+- ADD: Localization (Ukrainian, English and Russian).
+
+Версія 1.0 - 17.03.2025:
+- Stable version.
+
+## Subscribe and Support Ukraine
 
 👨Subscribe to my YouTube channel!
 
