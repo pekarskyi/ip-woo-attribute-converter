@@ -3,9 +3,9 @@ msgstr ""
 "Project-Id-Version: IP-WACG\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-03-18 09:11+0000\n"
-"PO-Revision-Date: 2025-03-18 12:21+0000\n"
+"PO-Revision-Date: 2025-03-20 11:42+0000\n"
 "Last-Translator: \n"
-"Language-Team: Ukrainian\n"
+"Language-Team: Українська\n"
 "Language: uk\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10 >= 2 && "
 "n%10<=4 &&(n%100<10||n%100 >= 20)? 1 : 2);\n"
@@ -20,28 +20,27 @@ msgstr ""
 msgid "author's website"
 msgstr "сайт автора, послуги, консультація"
 
-#: includes/class-ipwacg-converter.php:117
+#: includes/class-ipwacg-converter.php:151
 #| msgid "Check if you already have all attributes set as global"
 msgid "Check if you already have all attributes set as global."
 msgstr "Перевірте, чи всі атрибути вже встановлено як глобальні"
 
-#. %d: number of updated products
-#: includes/class-ipwacg-converter.php:299
+#: includes/class-ipwacg-converter.php:90
 msgid "Conversion completed! Updated products: %d."
-msgstr "Конверсію завершено! Оновлені товари: %d."
-
-#: includes/class-ipwacg-converter.php:109
-msgid "Convert Attribute"
-msgstr "Конвертувати атрибут"
+msgstr "Перетворення завершено! Оновлені товари: %d."
 
 #: includes/class-ipwacg-converter.php:32
 #: includes/class-ipwacg-converter.php:33
 msgid "Convert Attributes"
 msgstr "Конвертувати атрибути"
 
-#: includes/class-ipwacg-converter.php:85
+#: includes/class-ipwacg-converter.php:105
 msgid "Convert Custom Attributes to Global"
 msgstr "Конвертер атрибутів"
+
+#: includes/class-ipwacg-converter.php:143
+msgid "Convert Selected Attributes"
+msgstr "Конвертувати"
 
 #. Description of the plugin
 msgid "Converts product custom attributes to global attributes"
@@ -59,7 +58,7 @@ msgstr "опис, поширені запитання та оновлення."
 msgid "Helpful Links:"
 msgstr "Корисні посилання:"
 
-#: includes/class-ipwacg-converter.php:118
+#: includes/class-ipwacg-converter.php:152
 msgid ""
 "If you need to create new attributes, go to Products > Attributes in the "
 "WooCommerce menu"
@@ -83,7 +82,11 @@ msgstr "Рекомендується створити резервну копі�
 msgid "Mykola Pekarskyi"
 msgstr "Mykola Pekarskyi"
 
-#: includes/class-ipwacg-converter.php:89
+#: includes/class-ipwacg-converter.php:137
+msgid "No custom attributes available"
+msgstr "Індивідуальні атрибути відсутні"
+
+#: includes/class-ipwacg-converter.php:109
 msgid ""
 "No custom attributes found in your products. The conversion tool is "
 "currently inactive."
@@ -106,12 +109,13 @@ msgstr "Сторінка плагіна на Github"
 msgid "recommended plugin for creating site backups."
 msgstr "рекомендований плагін для створення резервних копій сайтів."
 
-#: includes/class-ipwacg-converter.php:100
-msgid "Select an attribute"
-msgstr "Виберіть атрибут"
+#: includes/class-ipwacg-converter.php:123
+msgid "Select All"
+msgstr "Вибрати все"
 
-#: includes/class-ipwacg-converter.php:97
-msgid "Select attribute to convert:"
+#: includes/class-ipwacg-converter.php:117
+#| msgid "Select attribute to convert:"
+msgid "Select attributes to convert:"
 msgstr "Виберіть атрибут для перетворення:"
 
 #: woo-attribute-converter.php:31
@@ -127,7 +131,7 @@ msgstr ""
 msgid "Warning:"
 msgstr "Увага:"
 
-#: includes/class-ipwacg-converter.php:115
+#: includes/class-ipwacg-converter.php:149
 msgid "What to do next:"
 msgstr "Що робити далі:"
 

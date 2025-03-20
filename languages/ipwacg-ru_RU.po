@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: IP-WACG\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-03-18 10:54+0000\n"
-"PO-Revision-Date: 2025-03-18 12:20+0000\n"
+"PO-Revision-Date: 2025-03-20 11:46+0000\n"
 "Last-Translator: \n"
 "Language-Team: Russian\n"
 "Language: ru_RU\n"
@@ -20,35 +20,34 @@ msgstr ""
 msgid "author's website"
 msgstr "сайт автора, услуги, консультация"
 
-#: includes/class-ipwacg-converter.php:117
+#: includes/class-ipwacg-converter.php:151
 msgid "Check if you already have all attributes set as global."
 msgstr "Проверьте, все ли атрибуты уже установлены как глобальные."
 
-#. %d: number of updated products
-#: includes/class-ipwacg-converter.php:299
+#: includes/class-ipwacg-converter.php:90
 msgid "Conversion completed! Updated products: %d."
-msgstr "Конверсия завершена! Обновлено товаров: %d."
-
-#: includes/class-ipwacg-converter.php:109
-msgid "Convert Attribute"
-msgstr "Преобразовать атрибут"
+msgstr "Преобразование завершено! Обновлено товаров: %d."
 
 #: includes/class-ipwacg-converter.php:32
 #: includes/class-ipwacg-converter.php:33
 msgid "Convert Attributes"
 msgstr "Преобразовать атрибуты"
 
-#: includes/class-ipwacg-converter.php:85
+#: includes/class-ipwacg-converter.php:105
 msgid "Convert Custom Attributes to Global"
 msgstr "Конвертер атрибутов"
 
+#: includes/class-ipwacg-converter.php:143
+msgid "Convert Selected Attributes"
+msgstr "Конвертировать"
+
 #. Description of the plugin
 msgid "Converts product custom attributes to global attributes"
-msgstr "Преобразует пользовательские атрибуты товаров в глобальные атрибуты"
+msgstr "Преобразует индивидуальные атрибуты товаров в глобальные атрибуты"
 
 #: includes/sidebar.php:6
 msgid "Converts product custom attributes to global attributes."
-msgstr "Преобразует пользовательские атрибуты товаров в глобальные атрибуты."
+msgstr "Преобразует индивидуальные атрибуты товаров в глобальные атрибуты."
 
 #: includes/sidebar.php:20
 msgid "description, FAQ and updates."
@@ -58,7 +57,7 @@ msgstr "описание, часто задаваемые вопросы и об
 msgid "Helpful Links:"
 msgstr "Полезные ссылки:"
 
-#: includes/class-ipwacg-converter.php:118
+#: includes/class-ipwacg-converter.php:152
 msgid ""
 "If you need to create new attributes, go to Products > Attributes in the "
 "WooCommerce menu"
@@ -82,12 +81,16 @@ msgstr "Рекомендуется создать резервную копию 
 msgid "Mykola Pekarskyi"
 msgstr "Mykola Pekarskyi"
 
-#: includes/class-ipwacg-converter.php:89
+#: includes/class-ipwacg-converter.php:137
+msgid "No custom attributes available"
+msgstr "Нет доступных индивидуальных атрибутов"
+
+#: includes/class-ipwacg-converter.php:109
 msgid ""
 "No custom attributes found in your products. The conversion tool is "
 "currently inactive."
 msgstr ""
-"В ваших товарах не найдено пользовательских атрибутов. Инструмент "
+"В ваших товарах не найдено индивидуальных атрибутов. Инструмент "
 "преобразования в настоящее время неактивен."
 
 #: includes/sidebar.php:30
@@ -106,12 +109,13 @@ msgstr "Страница плагина на Github"
 msgid "recommended plugin for creating site backups."
 msgstr "рекомендуемый плагин для создания резервных копий сайта."
 
-#: includes/class-ipwacg-converter.php:100
-msgid "Select an attribute"
-msgstr "Выберите атрибут"
+#: includes/class-ipwacg-converter.php:123
+msgid "Select All"
+msgstr "Выбрать все"
 
-#: includes/class-ipwacg-converter.php:97
-msgid "Select attribute to convert:"
+#: includes/class-ipwacg-converter.php:117
+#| msgid "Select attribute to convert:"
+msgid "Select attributes to convert:"
 msgstr "Выберите атрибут для преобразования:"
 
 #: woo-attribute-converter.php:31
@@ -128,7 +132,7 @@ msgstr ""
 msgid "Warning:"
 msgstr "Внимание:"
 
-#: includes/class-ipwacg-converter.php:115
+#: includes/class-ipwacg-converter.php:149
 msgid "What to do next:"
 msgstr "Что делать дальше:"
 

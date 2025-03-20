@@ -60,78 +60,109 @@ class IPWACG_Converter {
      * Function to display the admin page
      */
     public function render_admin_page() {
-        // Process the form
-        if (isset($_POST['convert_attributes']) && isset($_POST['attribute_name']) && !empty($_POST['attribute_name'])) {
-            check_admin_referer('ipwacg_convert_attributes', 'ipwacg_nonce');
-            
-            $attribute_name = sanitize_text_field($_POST['attribute_name']);
-            $result = $this->convert_custom_to_global($attribute_name);
-            
-            if (is_wp_error($result)) {
-                echo '<div class="notice notice-error"><p>' . esc_html($result->get_error_message()) . '</p></div>';
-            } else {
-                echo '<div class="notice notice-success"><p>' . esc_html($result) . '</p></div>';
-            }
+    // Process the form
+if (isset($_POST['convert_attributes']) && isset($_POST['attribute_names']) && !empty($_POST['attribute_names'])) {
+    check_admin_referer('ipwacg_convert_attributes', 'ipwacg_nonce');
+    
+    $attribute_names = array_map('sanitize_text_field', $_POST['attribute_names']);
+    $total_products_updated = 0; // Лічильник для загальної кількості оновлених товарів
+    $errors = []; // Масив для збереження помилок
+    
+    foreach ($attribute_names as $attribute_name) {
+        $result = $this->convert_custom_to_global($attribute_name);
+        
+        if (is_wp_error($result)) {
+            $errors[] = $result->get_error_message();
+        } else {
+             $total_products_updated += $result; // Додаємо кількість оновлених товарів
         }
+    }
+    
+    // Виводимо помилки, якщо вони є
+    if (!empty($errors)) {
+        echo '<div class="notice notice-error"><p>' . esc_html(implode(', ', $errors)) . '</p></div>';
+    }
+    
+    // Виводимо одне повідомлення про успіх із загальною кількістю оновлених товарів
+    if ($total_products_updated > 0) {
+        echo '<div class="notice notice-success"><p>' . 
+            sprintf(
+                esc_html__('Conversion completed! Updated products: %d.', 'ipwacg'),
+                $total_products_updated
+            ) . 
+            '</p></div>';
+    }
+}
 
-        // Get all unique custom attribute names
-        $custom_attributes = $this->get_unique_custom_attributes();
-        $has_custom_attributes = !empty($custom_attributes);
-        ?>
-        <div class="wrap">
-            <div class="ipwacg-container">
-                <div class="ipwacg-main-content">
+    // Get all unique custom attribute names
+    $custom_attributes = $this->get_unique_custom_attributes();
+    $has_custom_attributes = !empty($custom_attributes);
+    ?>
+    <div class="wrap">
+        <div class="ipwacg-container">
+            <div class="ipwacg-main-content">
 
-                    <h1><?php esc_html_e('Convert Custom Attributes to Global', 'ipwacg'); ?></h1>
-                    
-                    <?php if (!$has_custom_attributes): ?>
-                        <div class="notice notice-warning">
-                            <p><?php esc_html_e('No custom attributes found in your products. The conversion tool is currently inactive.', 'ipwacg'); ?></p>
-                        </div>
-                    <?php endif; ?>
-                    
-                    <form method="post" action="">
-                        <?php wp_nonce_field('ipwacg_convert_attributes', 'ipwacg_nonce'); ?>
-                        <table class="form-table">
-                            <tr>
-                                <th scope="row"><label for="attribute_name"><?php esc_html_e('Select attribute to convert:', 'ipwacg'); ?></label></th>
-                                <td>
-                                    <select name="attribute_name" id="attribute_name" <?php echo $has_custom_attributes ? '' : 'disabled'; ?>>
-                                        <option value=""><?php esc_html_e('Select an attribute', 'ipwacg'); ?></option>
+                <h1><?php esc_html_e('Convert Custom Attributes to Global', 'ipwacg'); ?></h1>
+                
+                <?php if (!$has_custom_attributes): ?>
+                    <div class="notice notice-warning">
+                        <p><?php esc_html_e('No custom attributes found in your products. The conversion tool is currently inactive.', 'ipwacg'); ?></p>
+                    </div>
+                <?php endif; ?>
+                
+                <form method="post" action="">
+                    <?php wp_nonce_field('ipwacg_convert_attributes', 'ipwacg_nonce'); ?>
+                    <table class="form-table">
+                        <tr>
+                            <th scope="row"><?php esc_html_e('Select attributes to convert:', 'ipwacg'); ?></th>
+                            <td>
+                                <?php if ($has_custom_attributes): ?>
+                                    <p>
+                                        <label>
+                                            <input type="checkbox" id="select_all_attributes" <?php echo $has_custom_attributes ? '' : 'disabled'; ?>>
+                                            <strong><?php esc_html_e('Select All', 'ipwacg'); ?></strong>
+                                        </label>
+                                    </p>
+                                    <div class="ipwacg-attributes-list">
                                         <?php foreach ($custom_attributes as $attr_name): ?>
-                                            <option value="<?php echo esc_attr($attr_name); ?>"><?php echo esc_html($attr_name); ?></option>
+                                            <p>
+                                                <label>
+                                                    <input type="checkbox" name="attribute_names[]" value="<?php echo esc_attr($attr_name); ?>" class="attribute-checkbox">
+                                                    <?php echo esc_html($attr_name); ?>
+                                                </label>
+                                            </p>
                                         <?php endforeach; ?>
-                                    </select>
-                                </td>
-                            </tr>
-                        </table>
-                        <p class="submit">
-                            <input type="submit" name="convert_attributes" class="button button-primary" value="<?php esc_attr_e('Convert Attribute', 'ipwacg'); ?>" <?php echo $has_custom_attributes ? '' : 'disabled'; ?>>
-                        </p>
-                    </form>
-                    
-                    <?php if (!$has_custom_attributes): ?>
-                        <div class="notice notice-info">
-                            <p><strong><?php esc_html_e('What to do next:', 'ipwacg'); ?></strong></p>
-                            <ul>
-                                <li><?php esc_html_e('Check if you already have all attributes set as global.', 'ipwacg'); ?></li>
-                                <li><?php esc_html_e('If you need to create new attributes, go to Products > Attributes in the WooCommerce menu', 'ipwacg'); ?></li>
-                            </ul>
-                        </div>
-                    <?php endif; ?>
-                </div>
+                                    </div>
+                                <?php else: ?>
+                                    <p><?php esc_html_e('No custom attributes available', 'ipwacg'); ?></p>
+                                <?php endif; ?>
+                            </td>
+                        </tr>
+                    </table>
+                    <p class="submit">
+                        <input type="submit" name="convert_attributes" class="button button-primary" value="<?php esc_attr_e('Convert Selected Attributes', 'ipwacg'); ?>" <?php echo $has_custom_attributes ? '' : 'disabled'; ?>>
+                    </p>
+                </form>
+                
+                <?php if (!$has_custom_attributes): ?>
+                    <div class="notice notice-info">
+                        <p><strong><?php esc_html_e('What to do next:', 'ipwacg'); ?></strong></p>
+                        <ul>
+                            <li><?php esc_html_e('Check if you already have all attributes set as global.', 'ipwacg'); ?></li>
+                            <li><?php esc_html_e('If you need to create new attributes, go to Products > Attributes in the WooCommerce menu', 'ipwacg'); ?></li>
+                        </ul>
+                    </div>
+                <?php endif; ?>
+            </div>
 
-                 <div class="ipwacg-sidebar">
-                    <?php include IPWACG_PLUGIN_DIR . 'includes/sidebar.php'; ?>
-                </div>
-
+            <div class="ipwacg-sidebar">
+                <?php include IPWACG_PLUGIN_DIR . 'includes/sidebar.php'; ?>
             </div>
 
         </div>
-
-
-        <?php
-    }
+    </div>
+    <?php
+}
 
     /**
      * Function to get all unique custom attribute names
@@ -294,10 +325,6 @@ class IPWACG_Converter {
         // Clear cache
         delete_transient('wc_attribute_taxonomies');
         
-        return sprintf(
-            /* translators: %d: number of updated products */
-            esc_html__('Conversion completed! Updated products: %d.', 'ipwacg'),
-            $products_updated
-        );
+        return $products_updated;
     }
 }

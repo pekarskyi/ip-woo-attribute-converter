@@ -2,7 +2,7 @@
 /**
  * Plugin Name: IP-WACG
  * Description: Converts product custom attributes to global attributes
- * Version: 1.1
+ * Version: 1.2
  * Author: Mykola Pekarskyi
  * Text Domain: ipwacg
  * Domain Path: /languages
@@ -19,7 +19,7 @@ if (!defined('ABSPATH')) {
 // Define plugin constants
 define('IPWACG_PLUGIN_DIR', plugin_dir_path(__FILE__));
 define('IPWACG_PLUGIN_URL', plugin_dir_url(__FILE__));
-define('IPWACG_PLUGIN_VERSION', '1.1');
+define('IPWACG_PLUGIN_VERSION', '1.2');
 
 /**
  * Add settings link to plugin page
@@ -69,6 +69,7 @@ add_action('plugins_loaded', 'ipwacg_init', 20);
 //CSS:Admin CSS
 function ipwacg_admin_assets() {
   wp_enqueue_style('ipwacg-admin-css', IPWACG_PLUGIN_URL . 'assets/css/admin.css', '', time());
+  wp_enqueue_script('ipwacg-admin-js', IPWACG_PLUGIN_URL .'assets/js/admin.js', array('jquery'), '1.0', true);
   }
   add_action('admin_init', 'ipwacg_admin_assets');
 

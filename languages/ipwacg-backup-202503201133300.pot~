@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: IP-WACG\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-03-20 11:33+0000\n"
+"POT-Creation-Date: 2025-03-18 10:54+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: \n"
@@ -20,12 +20,17 @@ msgstr ""
 msgid "author's website"
 msgstr ""
 
-#: includes/class-ipwacg-converter.php:151
+#: includes/class-ipwacg-converter.php:117
 msgid "Check if you already have all attributes set as global."
 msgstr ""
 
-#: includes/class-ipwacg-converter.php:90
+#. %d: number of updated products
+#: includes/class-ipwacg-converter.php:299
 msgid "Conversion completed! Updated products: %d."
+msgstr ""
+
+#: includes/class-ipwacg-converter.php:109
+msgid "Convert Attribute"
 msgstr ""
 
 #: includes/class-ipwacg-converter.php:32
@@ -33,12 +38,8 @@ msgstr ""
 msgid "Convert Attributes"
 msgstr ""
 
-#: includes/class-ipwacg-converter.php:105
+#: includes/class-ipwacg-converter.php:85
 msgid "Convert Custom Attributes to Global"
-msgstr ""
-
-#: includes/class-ipwacg-converter.php:143
-msgid "Convert Selected Attributes"
 msgstr ""
 
 #. Description of the plugin
@@ -57,7 +58,7 @@ msgstr ""
 msgid "Helpful Links:"
 msgstr ""
 
-#: includes/class-ipwacg-converter.php:152
+#: includes/class-ipwacg-converter.php:118
 msgid ""
 "If you need to create new attributes, go to Products > Attributes in the "
 "WooCommerce menu"
@@ -79,11 +80,7 @@ msgstr ""
 msgid "Mykola Pekarskyi"
 msgstr ""
 
-#: includes/class-ipwacg-converter.php:137
-msgid "No custom attributes available"
-msgstr ""
-
-#: includes/class-ipwacg-converter.php:109
+#: includes/class-ipwacg-converter.php:89
 msgid ""
 "No custom attributes found in your products. The conversion tool is "
 "currently inactive."
@@ -105,12 +102,12 @@ msgstr ""
 msgid "recommended plugin for creating site backups."
 msgstr ""
 
-#: includes/class-ipwacg-converter.php:123
-msgid "Select All"
+#: includes/class-ipwacg-converter.php:100
+msgid "Select an attribute"
 msgstr ""
 
-#: includes/class-ipwacg-converter.php:117
-msgid "Select attributes to convert:"
+#: includes/class-ipwacg-converter.php:97
+msgid "Select attribute to convert:"
 msgstr ""
 
 #: woo-attribute-converter.php:31
@@ -125,7 +122,7 @@ msgstr ""
 msgid "Warning:"
 msgstr ""
 
-#: includes/class-ipwacg-converter.php:149
+#: includes/class-ipwacg-converter.php:115
 msgid "What to do next:"
 msgstr ""
 

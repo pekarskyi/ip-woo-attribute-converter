@@ -105,3 +105,21 @@
         margin-top: 20px;
     }
 }
+
+/* Custom styles for the "Select All" checkbox */
+.ipwacg-attributes-list {
+    max-height: 300px;
+    overflow-y: auto;
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-top: 10px;
+    background: #f9f9f9;
+}
+
+.ipwacg-attributes-list p {
+    margin: 5px 0;
+}
+
+#select_all_attributes {
+    margin-right: 5px;
+}

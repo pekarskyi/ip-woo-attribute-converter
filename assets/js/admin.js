@@ -5,20 +5,47 @@
     'use strict';
     
     $(document).ready(function() {
-        var $select = $('#attribute_name');
-        var $button = $('input[name="convert_attributes"]');
+        var $attributeCheckboxes = $('.attribute-checkbox');
+        var $selectAllCheckbox = $('#select_all_attributes');
+        var $convertButton = $('input[name="convert_attributes"]');
         
-        $select.on('change', function() {
-            if ($(this).val()) {
-                $button.prop('disabled', false);
-            } else {
-                $button.prop('disabled', true);
-            }
+        // Function to update the convert button state
+        function updateConvertButtonState() {
+            var atLeastOneChecked = false;
+            $attributeCheckboxes.each(function() {
+                if ($(this).prop('checked')) {
+                    atLeastOneChecked = true;
+                    return false; // Break the loop
+                }
+            });
+            
+            $convertButton.prop('disabled', !atLeastOneChecked);
+        }
+        
+        // Handle selecting/deselecting all attributes
+        $selectAllCheckbox.on('change', function() {
+            var isChecked = $(this).prop('checked');
+            $attributeCheckboxes.prop('checked', isChecked);
+            updateConvertButtonState();
+        });
+        
+        // Handle individual attribute checkbox changes
+        $attributeCheckboxes.on('change', function() {
+            updateConvertButtonState();
+            
+            // Update "Select All" checkbox
+            var allChecked = true;
+            $attributeCheckboxes.each(function() {
+                if (!$(this).prop('checked')) {
+                    allChecked = false;
+                    return false; // Break the loop
+                }
+            });
+            
+            $selectAllCheckbox.prop('checked', allChecked);
         });
         
         // Initial check
-        if (!$select.val()) {
-            $button.prop('disabled', true);
-        }
+        updateConvertButtonState();
     });
 })(jQuery);
