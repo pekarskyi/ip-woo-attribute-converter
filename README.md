@@ -30,12 +30,12 @@
 6. Виберіть атрибут, який хочете конвертувати і натисніть кнопку "Convert Attribute".
 
 ## Скріншоти:
-![https://github.com/pekarskyi/assets/raw/master/woo-attribute-converter/woocommerce-attribute-converter.jpg](https://github.com/pekarskyi/assets/raw/master/woo-attribute-converter/woocommerce-attribute-converter.jpg)
+![https://github.com/pekarskyi/assets/raw/master/woo-attribute-converter/woocommerce-attribute-converter-1-2.jpg](https://github.com/pekarskyi/assets/raw/master/woo-attribute-converter/woocommerce-attribute-converter-1-2.jpg)
 
 ## Список змін
 
 **Версія 1.2 - 20.03.2025:**
-- IMPROVE: вибір 1, декількох або всіх атрибутів - замість Select використовується Checkbox.
+- ADD: вибір 1, декількох або всіх атрибутів - замість Select використовується Checkbox.
 - ADD: Checkbox - Вибрати всі
 - FIXED: інформаційні повідомлення
 - UPDATE: локалізація
