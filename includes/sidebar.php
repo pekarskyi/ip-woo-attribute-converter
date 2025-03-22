@@ -1,7 +1,7 @@
 
 <div class="ipwacg-section_information">
     
-    <?php echo '<h1>IP-WACG ' . IPWACG_PLUGIN_VERSION . '</h1>'; ?>
+    <?php echo '<h1>IP WACG ' . IPWACG_PLUGIN_VERSION . '</h1>'; ?>
     
     <p><strong><?php _e('Converts product custom attributes to global attributes.', 'ipwacg'); ?></strong></p>
     
