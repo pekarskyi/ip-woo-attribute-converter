@@ -2,8 +2,8 @@
 /**
  * Plugin Name: IP Woo Attributes Converter
  * Description: Converts product custom attributes to global attributes
- * Version: 1.3
- * Author: Mykola Pekarskyi
+ * Version: 1.3.0
+ * Author: InwebPress
  * Text Domain: ipwacg
  * Domain Path: /languages
  * Requires at least: 5.6
@@ -19,7 +19,7 @@ if (!defined('ABSPATH')) {
 // Define plugin constants
 define('IPWACG_PLUGIN_DIR', plugin_dir_path(__FILE__));
 define('IPWACG_PLUGIN_URL', plugin_dir_url(__FILE__));
-define('IPWACG_PLUGIN_VERSION', '1.3');
+define('IPWACG_PLUGIN_VERSION', '1.3.0');
 
 /**
  * Add settings link to plugin page
