@@ -1,6 +1,6 @@
 <?php
 /**
- * Plugin Name: IP WACG
+ * Plugin Name: IP Woo Attributes Converter
  * Description: Converts product custom attributes to global attributes
  * Version: 1.2
  * Author: Mykola Pekarskyi
