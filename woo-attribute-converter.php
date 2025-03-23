@@ -2,7 +2,7 @@
 /**
  * Plugin Name: IP Woo Attributes Converter
  * Description: Converts product custom attributes to global attributes
- * Version: 1.2
+ * Version: 1.3
  * Author: Mykola Pekarskyi
  * Text Domain: ipwacg
  * Domain Path: /languages
@@ -19,7 +19,7 @@ if (!defined('ABSPATH')) {
 // Define plugin constants
 define('IPWACG_PLUGIN_DIR', plugin_dir_path(__FILE__));
 define('IPWACG_PLUGIN_URL', plugin_dir_url(__FILE__));
-define('IPWACG_PLUGIN_VERSION', '1.2');
+define('IPWACG_PLUGIN_VERSION', '1.3');
 
 /**
  * Add settings link to plugin page
@@ -98,3 +98,15 @@ register_deactivation_hook(__FILE__, 'ipwacg_deactivate');
 function ipwacg_deactivate() {
     flush_rewrite_rules();
 }
+
+// Adding update check via GitHub
+require_once plugin_dir_path( __FILE__ ) . 'updates/github-updater.php';
+if ( function_exists( 'ip_woo_attribute_converter_github_updater_init' ) ) {
+    ip_woo_attribute_converter_github_updater_init(
+        __FILE__,       // Plugin file path
+        'pekarskyi',     // Your GitHub username
+        '',              // Access token (empty)
+        'ip-woo-attribute-converter' // Repository name (optional)
+        // Other parameters are determined automatically
+    );
+} 
