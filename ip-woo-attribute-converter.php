@@ -2,13 +2,17 @@
 /**
  * Plugin Name: IP Woo Attributes Converter
  * Description: Converts product custom attributes to global attributes
- * Version: 1.3.0
+ * Version: 1.3.1
  * Author: InwebPress
+ * Plugin URI: https://github.com/pekarskyi/ip-woo-attribute-converter
+ * Author URI: https://inwebpress.com
  * Text Domain: ipwacg
  * Domain Path: /languages
- * Requires at least: 5.6
+ * Requires at least: 6.7.0
+ * Tested up to: 6.7.2
  * Requires PHP: 7.4
  * WC requires at least: 5.0
+ * WC tested up to: 9.7.1
  */
 
 // For security - ensure the script is called from WordPress
@@ -19,7 +23,7 @@ if (!defined('ABSPATH')) {
 // Define plugin constants
 define('IPWACG_PLUGIN_DIR', plugin_dir_path(__FILE__));
 define('IPWACG_PLUGIN_URL', plugin_dir_url(__FILE__));
-define('IPWACG_PLUGIN_VERSION', '1.3.0');
+define('IPWACG_PLUGIN_VERSION', get_file_data(__FILE__, array('Version' => 'Version'), 'plugin')['Version']);
 
 /**
  * Add settings link to plugin page
@@ -68,8 +72,8 @@ add_action('plugins_loaded', 'ipwacg_init', 20);
 
 //CSS:Admin CSS
 function ipwacg_admin_assets() {
-  wp_enqueue_style('ipwacg-admin-css', IPWACG_PLUGIN_URL . 'assets/css/admin.css', '', time());
-  wp_enqueue_script('ipwacg-admin-js', IPWACG_PLUGIN_URL .'assets/js/admin.js', array('jquery'), '1.0', true);
+  wp_enqueue_style('ipwacg-admin-css', IPWACG_PLUGIN_URL . 'assets/css/admin.css', '', IPWACG_PLUGIN_VERSION);
+  wp_enqueue_script('ipwacg-admin-js', IPWACG_PLUGIN_URL .'assets/js/admin.js', array('jquery'), IPWACG_PLUGIN_VERSION, true);
   }
   add_action('admin_init', 'ipwacg_admin_assets');
 
@@ -109,4 +113,31 @@ if ( function_exists( 'ip_woo_attribute_converter_github_updater_init' ) ) {
         'ip-woo-attribute-converter' // Repository name (optional)
         // Other parameters are determined automatically
     );
+}
+
+// Adding update check via GitHub
+require_once plugin_dir_path( __FILE__ ) . 'updates/github-updater.php';
+
+$github_username = 'pekarskyi'; // Вказуємо ім'я користувача GitHub
+$repo_name = 'ip-woo-attribute-converter'; // Вказуємо ім'я репозиторію GitHub, наприклад ip-wp-github-updater
+$prefix = 'ip_woo_attribute_converter'; // Встановлюємо унікальний префікс плагіну, наприклад ip_wp_github_updater
+
+// Ініціалізуємо систему оновлення плагіну з GitHub
+if ( function_exists( 'ip_github_updater_load' ) ) {
+    // Завантажуємо файл оновлювача з нашим префіксом
+    ip_github_updater_load($prefix);
+    
+    // Формуємо назву функції оновлення з префіксу
+    $updater_function = $prefix . '_github_updater_init';   
+    
+    // Після завантаження наша функція оновлення повинна бути доступна
+    if ( function_exists( $updater_function ) ) {
+        call_user_func(
+            $updater_function,
+            __FILE__,       // Plugin file path
+            $github_username, // Your GitHub username
+            '',              // Access token (empty)
+            $repo_name       // Repository name (на основі префіксу)
+        );
+    }
 } 
