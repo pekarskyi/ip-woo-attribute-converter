@@ -1,69 +1,52 @@
 # IP Woo Attributes Converter
 
-Конвертує індивідуальні атрибути товарів у глобальні атрибути.
+Converts individual product attributes to global attributes.
 
-Перед конвертацією атрибутів зробіть резервну копію БД!
+Make a backup of your database before converting attributes!
+
+[Читати опис українською](https://github.com/pekarskyi/ip-woo-attribute-converter/blob/master/README_UA.md) <img src="https://github.com/pekarskyi/assets/raw/master/flags/ua.svg" width="17">
 
 [![GitHub release (latest by date)](https://img.shields.io/github/v/release/pekarskyi/woo-attribute-converter?style=for-the-badge)](https://GitHub.com/pekarskyi/woo-attribute-converter/releases/)
 
-## Можливості:
-1. Додає новий пункт меню в адмінпанелі WooCommerce: "Конвертація атрибутів"
-2. Автоматично знаходить всі індивідуальні атрибути, які використовуються у ваших товарах
-3. Дозволяє вибрати конкретний індивідуальний атрибут для конвертації
-4. Створює новий глобальний атрибут з тим самим іменем
-5. Збирає всі унікальні значення індивідуального атрибута з усіх товарів
-6. Додає ці значення як терміни глобального атрибута
-7. Оновлює всі товари, замінюючи індивідуальний атрибут на глобальний
+## Features:
+1. Adds a new menu item in the WooCommerce admin panel: "Convert Attributes"
+2. Automatically finds all individual attributes that are used in your products
+3. Allows you to select a specific individual attribute for conversion
+4. Creates a new global attribute with the same name
+5. Collects all unique values of the individual attribute from all products
+6. Adds these values as terms of the global attribute
+7. Updates all products, replacing the individual attribute with the global one
 
-## Локалізація:
-- Українська
+## Localization:
+- Ukrainian
 - English
-- Русский
+- Russian
 
-Потрібні переклади на інші мови? - Не соромтеся звертатися!
+Need translations to other languages? - Feel free to contact!
 
-## Встановлення
+## Installation
 
-### Варіант №1:
+### Option #1:
 
-1. Завантажте плагін `IP Woo Attributes Converter` (зелена кнопка Code - Download ZIP).
-2. Встановіть його на вашому сайті WordPress. Переконайтесь, що папка плагіна має назву `ip-woo-attribute-converter` (назва на роботу плагіна не впливає, але це впливає на отримання подальших оновлень).
-3. Активуйте плагін.
+1. Download the `IP Woo Attributes Converter` plugin (green Code button - Download ZIP).
+2. Install it on your WordPress site. Make sure the plugin folder is named `ip-woo-attribute-converter` (the name doesn't affect the plugin's functionality, but it affects receiving future updates).
+3. Activate the plugin.
 
-### Варіант №2 (рекомендований):
-- Встановіть та активуйте даний плагін (інсталятор плагінів): https://github.com/pekarskyi/ip-installer
-- За допомогою плагіна `IP Installer` встановіть та активуйте плагін `IP Woo Attributes Converter`.
+### Option #2 (recommended):
+- Install and activate this plugin (plugin installer): https://github.com/pekarskyi/ip-installer
+- Use the `IP Installer` plugin to install and activate the `IP Woo Attributes Converter` plugin.
 
-## Використання
+## Usage
 
-1. Перейдіть в розділ WooCommerce > Convert Attributes.
-2. Виберіть атрибут або атрибути, які бажаєте конвертувати і натисніть на кнопку "Convert Attribute".
+1. Go to WooCommerce > Convert Attributes.
+2. Select the attribute or attributes you want to convert and click the "Convert Attribute" button.
 
-## Скріншоти:
+## Screenshots:
 ![https://github.com/pekarskyi/assets/raw/master/woo-attribute-converter/woocommerce-attribute-converter-1-2.jpg](https://github.com/pekarskyi/assets/raw/master/woo-attribute-converter/woocommerce-attribute-converter-1-2.jpg)
 
-## Список змін
+## Changelog
 
-1.3.1 - 04.04.2025:
-- UPDATE: покращено функцію оновлення плагіна.
-
-1.3.0 - 23.03.2025:
-- ADDED: функція перевірки версії та оновлення плагіна
-
-1.2.0 - 20.03.2025:
-- ADD: вибір 1, декількох або всіх атрибутів - замість Select використовується Checkbox.
-- ADD: Checkbox - Вибрати всі
-- IMPROVE: інформаційні повідомлення
-- UPDATE: локалізація
-  
-1.1.0 - 18.03.2025:
-- FIXED: класи CSS та неймінг.
-- ADD: сайдбар з інформацією.
-- ADD: Локалізація (Українська, Англійська і Російська).
-
-1.0.0 - 17.03.2025:
-- Новий реліз
-
-👨Підпишіться на мій канал на YouTube!
+1.0.0 - 06.04.2025:
+- Initial release
 
 [![YouTube Channel Subscribers](https://img.shields.io/youtube/channel/subscribers/UC9ZEeT6WrGupgza9KXpazyA)](https://www.youtube.com/@inwebpress/videos)

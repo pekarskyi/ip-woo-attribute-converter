@@ -2,7 +2,7 @@
 /**
  * Plugin Name: IP Woo Attributes Converter
  * Description: Converts product custom attributes to global attributes
- * Version: 1.3.1
+ * Version: 1.0.0
  * Author: InwebPress
  * Plugin URI: https://github.com/pekarskyi/ip-woo-attribute-converter
  * Author URI: https://inwebpress.com
